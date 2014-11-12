@@ -5,14 +5,14 @@ module.exports = function(grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: 'css/sass',
+					sassDir: 'sass',
 					cssDir: 'css'
 				}
 			}
 		},
 		watch: {
 		  scripts: {
-		    files: ['**/*.scss'],
+		    files: ['sass/*.scss'],
 		    tasks: ['compass'],
 		    options: {
 		      spawn: false,
