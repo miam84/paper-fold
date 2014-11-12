@@ -1,0 +1,85 @@
+/* line 3, ../sass/cube.scss */
+#playground {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: 50% 100%;
+}
+
+/* line 12, ../sass/cube.scss */
+.cube {
+  position: absolute;
+  top: 310px;
+}
+
+/* line 17, ../sass/cube.scss */
+.cube-face {
+  background-color: #6b8aab;
+  border: 3px solid black;
+  width: 297px;
+  height: 297px;
+  position: absolute;
+  opacity: 0.5;
+  text-align: center;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+/* line 29, ../sass/cube.scss */
+#c-front {
+  background-color: red;
+  transform: translateZ(150px);
+}
+
+/* line 34, ../sass/cube.scss */
+#c-back {
+  background-color: green;
+  transform: translateZ(-150px);
+}
+
+/* line 39, ../sass/cube.scss */
+#c-top {
+  background-color: lemon;
+  transform: translateY(-150px) rotateX(90deg);
+}
+
+/* line 44, ../sass/cube.scss */
+#c-bottom {
+  background-color: lightgrey;
+  transform: translateY(150px) rotateX(-90deg);
+}
+
+/* line 49, ../sass/cube.scss */
+#c-left {
+  background-color: cyan;
+  transform: translateX(-150px) rotateY(-90deg);
+}
+
+/* line 55, ../sass/cube.scss */
+#c-right {
+  background-color: lightgrey;
+  transform: translateX(150px) rotateY(90deg);
+}
+
+@keyframes rotatingCube {
+  /* line 62, ../sass/cube.scss */
+  0% {
+    top: 0px;
+  }
+
+  /* line 63, ../sass/cube.scss */
+  33% {
+    top: 50px;
+    animation-timing-function: ease-out;
+  }
+
+  /* line 64, ../sass/cube.scss */
+  100% {
+    top: 100px;
+    left: 10px;
+  }
+}
