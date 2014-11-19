@@ -1,0 +1,41 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.2rem;
+}
+#playground {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  perspective: 1000px;
+  perspective-origin: 50% 100%;
+}
+.face{
+  background-color: #6b8aab;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  -webkit-animation: myAnim 3s linear infinite;
+  animation: myAnim 3s linear infinite;
+
+}
+
+@-webkit-keyframes myAnim{
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(360deg);
+  }
+}  
+
+@keyframes myAnim{
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(360deg);
+  }
+}  

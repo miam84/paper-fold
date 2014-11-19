@@ -1,0 +1,78 @@
+@import "compass";
+
+html{
+	font-size: 62.5%;	
+}
+
+body{
+	font-size: 1.2rem;
+}
+
+#playground{
+	position: fixed;
+	border: 2px solid lightgrey;
+	margin: auto;	
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	perspective: 1000px;
+	perspective-origin: 50% 100%;
+}
+
+.cube{
+	position: absolute;
+	top: calc(50% - 150px);
+	left: calc(50% - 150px);
+}
+
+.cube-face{
+	background-color: #6b8aab;
+	border: 3px solid black;
+	width: 297px;
+	height: 297px;
+	position: absolute;
+	opacity: 0.5;
+	text-align: center;
+	font-size: 4rem;
+
+	@include transition(all 1s ease-in-out);
+}
+
+#c-front{
+	background-color: red;
+	transform: translateZ(150px);
+}
+
+#c-back{
+	background-color: green;
+	transform: translateZ(-150px) rotateY(180deg) rotate(180deg);
+}
+
+#c-top{
+	background-color: lemon;
+	transform: translateY(-150px) rotateX(90deg);
+}
+
+#c-bottom{
+	background-color: lightgrey;
+	transform: translateY(150px) rotateX(-90deg);
+}
+
+#c-left{
+	background-color: cyan;
+	transform: translateX(-150px) rotateY(-90deg);
+	
+}
+
+#c-right{
+	background-color: lightgrey;
+	transform: translateX(150px) rotateY(90deg);
+}	
+
+
+@keyframes rotatingCube {
+	0% {top: 0px}
+	33% {top: 50px; animation-timing-function: ease-out}
+	100% {top: 100px; left: 10px}
+}
