@@ -1,0 +1,30 @@
+#container{
+	margin: 200px auto;
+}
+
+#sun circle, #sun line{
+	animation: summer 4s linear 0s infinite alternate;
+	
+}
+
+.snow{
+	transform: translateY(-200px);
+	transition: transform 2s linear;
+}
+
+.fall{
+	transform: translateY(0);
+}
+
+@keyframes summer {
+	from { 
+		stroke:blue;
+		transform: translate(0);
+		fill: red;
+	} 
+	to {
+		stroke: red;
+		fill: black;
+		transform: translate(300px);
+	}  
+}
